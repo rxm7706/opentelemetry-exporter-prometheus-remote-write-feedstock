@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-exporter-prometheus-remote-write" %}
-{% set version = "0.48b0" %}
+{% set version = "0.49b0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_exporter_prometheus_remote_write-{{ version }}.tar.gz
-  sha256: cafdf92989fff940176f3f3568f03f17ccad9a07be1b2bb5f5420aafb869dd54
+  sha256: 7b619b4d1bdfbded6ed5bafd10ed6c3653b49bfcb33352bfd4895ecc5bbd2aea
 
 build:
   noarch: python
