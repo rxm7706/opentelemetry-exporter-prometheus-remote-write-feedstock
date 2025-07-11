@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-exporter-prometheus-remote-write" %}
-{% set version = "0.55b1" %}
+{% set version = "0.56b0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_exporter_prometheus_remote_write-{{ version }}.tar.gz
-  sha256: 29fc2696c02347491047ceeadc5e2f8103783a70812f2dd955f1298413e80531
+  sha256: 6d2a3120c2e35a494aff9fc92c3bbe027f8e781782fc1f2d56c36be435c9d319
 
 build:
   noarch: python
@@ -21,11 +21,11 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - protobuf >=5.26,<6.dev0
-    - requests ~=2.28
-    - opentelemetry-api ~=1.12
-    - opentelemetry-sdk ~=1.12
-    - python-snappy >=0.6,<1.dev0
+    - protobuf ~=5.26
+    - requests >=2.28,<3.dev0
+    - opentelemetry-api >=1.12,<2.dev0
+    - opentelemetry-sdk >=1.12,<2.dev0
+    - python-snappy ~=0.6
 
 test:
   imports:
